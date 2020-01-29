@@ -28,8 +28,8 @@ def get_tempreture(longitude, latitude):
 
 
 
-longitude = float(input())
-latitude = float(input())
+longitude = float(input("Input longitude: "))
+latitude = float(input("Input latitude: "))
 
 
 cur, fl = get_tempreture(longitude, latitude)

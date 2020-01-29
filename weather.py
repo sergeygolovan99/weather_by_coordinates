@@ -28,8 +28,15 @@ def get_tempreture(longitude, latitude):
 
 
 
-longitude = float(input("Input longitude: "))
-latitude = float(input("Input latitude: "))
+data = []
+with open("data.txt") as f:
+	for line in f:
+		data.append([float(x) for x in line.split()])
+
+
+
+latitude = data[1] #долгота
+longitude = data[0] #широта
 
 
 cur, fl = get_tempreture(longitude, latitude)
